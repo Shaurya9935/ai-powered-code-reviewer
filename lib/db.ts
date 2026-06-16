@@ -1,8 +1,8 @@
 import { PrismaPg } from "@prisma/adapter-pg";
-import { PrismaClient } from "@prisma/client/scripts/default-index.js";
+import { PrismaClient } from "./generated/prisma/client";
 
 const globalForPrisma = globalThis as unknown as {
-    prisma: PrismaPg | undefined;
+  prisma: PrismaClient | undefined;
 };
 
 function createPrismaClient() {
